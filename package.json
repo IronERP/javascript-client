@@ -1,0 +1,20 @@
+{
+    "name": "@ironerp/client",
+    "version": "0.0.1",
+    "description": "The official JS client for IronERP",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "repository": "https://github.com/IronERP/javascript-client",
+    "author": "UTF-8x",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "typescript": "^5.7.2"
+    },
+    "scripts": {
+        "build": "tsc --strict"
+    }
+}
