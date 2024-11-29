@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm version ${{ github.ref_name }}
+      - run: npm version ${{ github.ref_name }} --allow-same-version
       - run: yarn build
       - run: 'npm publish --provenance --access public'
         env:
