@@ -14,11 +14,12 @@ export interface Schema {
 
 export interface SchemaField {
     name: string;
-        label: string;
-        type: string;
-        required: boolean;
-        secret: boolean;
-        redacted: boolean;
+    label: string;
+    type: string;
+    required: boolean;
+    secret: boolean;
+    redacted: boolean;
+    foreignKeyTarget?: string | null;
 }
 
 export class ModelClient {
