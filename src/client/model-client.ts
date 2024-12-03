@@ -93,4 +93,14 @@ export class ModelClient {
     public async deleteItem(modelName: string, objectId: string): Promise<boolean> {
         return await this._common.deleteRaw(modelName, objectId);
     }
+
+    /**
+     * Search for entities in a specific model
+     * @param modelName name of the model
+     * @param query the query
+     * @returns list of results
+     */
+    public async searchItems(modelName: string, query: string): Promise<any[]> {
+        return await this._common.fetchResource<any[]>(`${modelName}/_search?query=${query}`);
+    }
 }
