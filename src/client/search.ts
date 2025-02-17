@@ -1,4 +1,4 @@
-import { Common } from "./common";
+import { Common } from "./common.js";
 
 export interface SearchResult {
     title: string;

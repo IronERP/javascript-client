@@ -1,6 +1,6 @@
-import { Common } from './common'
-import { ModelClient } from './model-client';
-import { Search } from './search';
+import { Common } from './common.js'
+import { ModelClient } from './model-client.js';
+import { Search } from './search.js';
 
 export class IronERPClient {
     private static BASE_URL: string;
