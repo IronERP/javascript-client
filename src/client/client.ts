@@ -3,15 +3,15 @@ import { ModelClient } from './model-client.js';
 import { Search } from './search.js';
 
 export class IronERPClient {
-    private static BASE_URL: string;
-    private static CLIENT_SECRET: string;
-    private static INITIALIZED: boolean = false;
+    private BASE_URL: string;
+    private CLIENT_SECRET: string;
+    private INITIALIZED: boolean = false;
 
-    private static _common: Common;
-    private static _modelClient: ModelClient;
-    private static _searchClient: Search;
+    private _common: Common;
+    private _modelClient: ModelClient;
+    private _searchClient: Search;
 
-    public static init(baseUrl: string, clientSecret: string): void {
+    constructor(baseUrl: string, clientSecret: string) {
         this.BASE_URL = baseUrl;
         this.CLIENT_SECRET = clientSecret;
         this.INITIALIZED = true;
@@ -24,21 +24,21 @@ export class IronERPClient {
     /**
      * Get the raw client
      */
-    public static get common(): Common {
+    public get common(): Common {
         return this._common;
     }
 
     /**
      * Interact with Model resources
      */
-    public static get models(): ModelClient {
+    public get models(): ModelClient {
         return this._modelClient;
     }
 
     /**
      * Perform search
      */
-    public static get search(): Search {
+    public get search(): Search {
         return this._searchClient;
     }
 }

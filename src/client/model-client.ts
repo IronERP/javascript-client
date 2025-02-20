@@ -2,6 +2,7 @@ import { Common } from "./common.js";
 
 export interface SimpleModelSpec {
     name: string,
+    namespace: string,
     isGenerated: boolean
 }
 
